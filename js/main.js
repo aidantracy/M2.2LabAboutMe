@@ -4,15 +4,36 @@ window.onload = loaded;
  * Simple Function that will be run when the browser is finished loading.
  */
 function loaded() {
-    // Assign to a variable so we can set a breakpoint in the debugger!
-    const hello = sayHello();
-    console.log(hello);
+    console.log("The content has loaded successfully!")
 }
 
 /**
- * This function returns the string 'hello'
- * @return {string} the string hello
+ * This function returns a call to the modal functions
+ * @return {showModal} call
  */
 export function sayHello() {
-    return 'hello';
+    return showModal()
 }
+
+/////////chatGPT generated content//////////////////////////
+function showModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+
+  // Function to close the modal
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  // Close the modal when clicking outside of the modal content
+  window.onclick = function(event) {
+    const modal = document.getElementById("myModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+////////////////////////////////////////////////////////////
+
+
+window.closeModal = closeModal;
+window.sayHello = sayHello;
