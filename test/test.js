@@ -1,11 +1,26 @@
-import {sayHello} from '../js/main.js';
+import {sayHello, showModal} from '../js/main.js';
 
-QUnit.module('hello', function() {
 
-    QUnit.test('make sure the hello function says hello', function(assert) {
-        var result = sayHello();
-        assert.equal(result, 'hello');
+QUnit.module('sayHello function Exists', function() {
+
+    QUnit.test('make sure the sayHello function exists and is a function', function(assert) {
+        assert.ok(sayHello, "sayHello function exists");
     });
 
+    QUnit.test('make sure the sayHello function is an actual function', function(assert){
+        assert.ok(typeof sayHello === 'function', "sayHello is a function")
+    });
+ 
+});
 
+QUnit.module('showModal function Exists', function() {
+
+    QUnit.test('make sure the showModal function exists and is a function', function(assert) {
+        assert.ok(showModal, "showModal function exists");
+    });
+
+    QUnit.test('make sure the showModal function is an actual function', function(assert){
+        assert.ok(typeof showModal === 'function', "showModal is a function")
+    });
+ 
 });

@@ -1,5 +1,20 @@
 window.onload = loaded;
 
+document.querySelector('.about').animate([
+    {
+        transform: 'translateY(0)'
+    },
+    {
+        transform: 'translateY(250px)'
+    }
+],{
+    duration: 1000,
+    iteration: Infinity,
+    direction: alternate,
+    easing: 'ease-in-out'
+})
+
+
 /**
  * Simple Function that will be run when the browser is finished loading.
  */
@@ -15,23 +30,26 @@ export function sayHello() {
     return showModal()
 }
 
+
+
 /////////chatGPT generated content//////////////////////////
-function showModal() {
+export function showModal() {
     document.getElementById("myModal").style.display = "block";
-  }
+    return 'Modal Shown'
+}
 
-  // Function to close the modal
-  function closeModal() {
+// Function to close the modal
+function closeModal() {
     document.getElementById("myModal").style.display = "none";
-  }
+}
 
-  // Close the modal when clicking outside of the modal content
-  window.onclick = function(event) {
+// Close the modal when clicking outside of the modal content
+window.onclick = function(event) {
     const modal = document.getElementById("myModal");
     if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
+        modal.style.display = "none";
+    }       
+}
 ////////////////////////////////////////////////////////////
 
 
