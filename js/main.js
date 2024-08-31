@@ -1,18 +1,5 @@
 window.onload = loaded;
 
-document.querySelector('.about').animate([
-    {
-        transform: 'translateY(0)'
-    },
-    {
-        transform: 'translateY(250px)'
-    }
-],{
-    duration: 1000,
-    iteration: Infinity,
-    direction: alternate,
-    easing: 'ease-in-out'
-})
 
 
 /**
